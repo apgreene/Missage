@@ -1,11 +1,14 @@
 import { SpeechClient } from '@google-cloud/speech';
 import fs from 'fs';
+import path from 'path';
+const __dirname = path.resolve();
 
 export default async (input) => {
   const timestamp = false;
   const keyFilename = 'controllers/STT/missage-38c481f53476.json';
   const client = new SpeechClient({ keyFilename });
-  let filename = `/Users/louiscappell/Desktop/codeworks/legacy/Missage/server/uploads/${input}`;
+  let filename = path.resolve(__dirname, `../server/uploads/${input}`);
+
 
 
   const languageCode = 'en-US';

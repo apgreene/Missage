@@ -1,3 +1,6 @@
+/* Import Font - Montserrat */
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
 .page {
   height: 70vh;
   background-image: url(../styles/blurry-gradient-haikei.svg);
@@ -7,6 +10,8 @@
   background-repeat: no-repeat;
   background-origin: padding-box;
   background-clip: border-box;
+
+  font-family: 'Nunito', sans-serif;
 }
 
 /* Main Page */
@@ -38,6 +43,8 @@
   font-size: 40px;
   padding-top: 30px;
   margin: 0;
+  border-bottom: 2px solid black;
+  padding-bottom: 10px;
 }
 
 .m {
@@ -52,6 +59,14 @@
   color: var(--main-white);
   background-color: var(--main-purple);
   width: 200px;
+  padding: 10px;
+  border-radius: 10px;
+  min-width: 20rem;
+  min-height: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  letter-spacing: 2px;
 }
 
 .try:hover {
@@ -78,6 +93,9 @@
 }
 .content {
   padding-left: 50px;
+
+  min-width: 50rem;
+  text-align: center;
 }
 .featureImg {
   width: 250px;
@@ -85,7 +103,14 @@
   margin-top: 30px;
 }
 .featureTitle {
-  font-size: 20px;
+  font-size: 23px;
+  letter-spacing: 1px;
+  font-weight: bold;
+}
+
+.pText {
+  line-height: 30px;
+  letter-spacing: 1px;
 }
 
 /* Background */
@@ -158,6 +183,9 @@
   .wave svg {
     width: calc(100% + 1.3px);
     height: 110px;
+  }
+  .content {
+    min-width: none;
   }
 }
 

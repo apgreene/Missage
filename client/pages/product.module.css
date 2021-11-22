@@ -119,6 +119,10 @@
   letter-spacing: 1px;
 }
 
+.buttonOverlay {
+  z-index: 3;
+}
+
 /* Background */
 
 .wave {
@@ -130,6 +134,7 @@
   overflow: hidden;
   line-height: 0;
   transform: rotate(180deg);
+  z-index:1;
 }
 
 .wave svg {

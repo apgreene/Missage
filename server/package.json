@@ -12,6 +12,7 @@
   "dependencies": {
     "@google-cloud/speech": "^4.9.0",
     "chai": "^4.3.4",
+    "chai-http": "^4.3.0",
     "cors": "^2.8.5",
     "ejs": "^3.1.6",
     "express": "^4.17.1",
@@ -28,6 +29,7 @@
     "wavefile": "^11.0.0"
   },
   "devDependencies": {
-    "nodemon": "^2.0.14"
+    "nodemon": "^2.0.14",
+    "request": "^2.88.2"
   }
 }

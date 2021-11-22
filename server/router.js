@@ -10,3 +10,5 @@ router.delete('/note', controller.deleteAll);
 router.put('/note/:id', controller.updateNote);
 
 export default router;
+
+

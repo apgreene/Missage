@@ -22,14 +22,19 @@
 .title {
   display: flex;
   justify-content: center;
-  align-items: center;
-  padding: 120px;
-  margin-top: 10px;
+  align-items: flex-start;
+  padding-left: 50px;
+
+
+
 }
 
 .col {
   display: flex;
   flex-direction: column;
+  /* position: absolute; */
+
+
 }
 
 .xl {
@@ -53,6 +58,7 @@
 }
 
 .try {
+  z-index: 1;
   text-align: center;
   padding: 10px;
   text-decoration: none;

@@ -14,6 +14,7 @@ const noteSchema = new Schema({
   lastModified: { type: Date, default: null },
 });
 
+
 const Model = model('Note', noteSchema);
 
 export default Model;

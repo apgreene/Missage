@@ -23,7 +23,10 @@ const Named = () => {
             <p className={styles.xl}>Don't Miss A Word!🤞</p>
             <p className={styles.m}>
               An assistant in your hand who improved your work ability and
-              quality of life! Finally, Your AI recording record manager is
+              quality of life! 
+            <br />
+            Finally, 
+              Your AI recording record manager is
               here. 🚀
             </p>
             <div>

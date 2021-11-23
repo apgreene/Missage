@@ -1,5 +1,5 @@
 
-.header {color: blue}
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
 
 .container {
   display: flex;
@@ -15,8 +15,8 @@
   background-repeat: no-repeat;
   background-origin: padding-box;
   background-clip: border-box;
-
   font-family: 'Nunito', sans-serif;
+  letter-spacing: ;
 }
 
 .logo {
@@ -26,15 +26,3 @@
 }
 
 
-.page {
-
-  background-image: url(../styles/blurry-gradient-haikei.svg);
-  /* bottom */
-  background-position: center center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-origin: padding-box;
-  background-clip: border-box;
-
-  font-family: 'Nunito', sans-serif;
-}

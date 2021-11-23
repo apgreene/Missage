@@ -1,0 +1,40 @@
+
+.header {color: blue}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: '';
+  flex-direction: column;
+  height: 100vh;
+  background-image: url(../styles/blurry-gradient-haikei.svg);
+  /* bottom */
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-origin: padding-box;
+  background-clip: border-box;
+
+  font-family: 'Nunito', sans-serif;
+}
+
+.logo {
+  width: 500px;
+  padding: 40px;
+  margin: 40px;
+}
+
+
+.page {
+
+  background-image: url(../styles/blurry-gradient-haikei.svg);
+  /* bottom */
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-origin: padding-box;
+  background-clip: border-box;
+
+  font-family: 'Nunito', sans-serif;
+}

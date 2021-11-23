@@ -42,6 +42,11 @@
   text-decoration: none;
 }
 
+.logo:hover {
+  transition: 0.4s;
+  color: var(red);
+}
+
 .auth {
   display: flex;
   justify-content: space-around;

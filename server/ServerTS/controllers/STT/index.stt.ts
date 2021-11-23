@@ -2,6 +2,16 @@ import { SpeechClient } from '@google-cloud/speech';
 import fs from 'fs';
 import path from 'path';
 // var __dirname = path.resolve();
+interface TheObject {
+  transcript: string
+  timestamp: {}[]
+}
+
+interface ResponseObject {
+results: [],
+totalBilledTime: {}
+
+}
 
 export default async (input: string) => {
   const timestamp = false;
@@ -12,16 +22,6 @@ export default async (input: string) => {
 
   // server/ServerJS/controllers/STT/missage-38c481f53476.json
 
-  interface TheObject {
-    transcript: string
-    timestamp: {}[]
-  }
-
-  interface ResponseObject {
-  results: [],
-  totalBilledTime: {}
-
-  }
 
   const languageCode = 'en-US';
 

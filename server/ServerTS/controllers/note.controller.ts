@@ -1,13 +1,21 @@
-import Note from '../models/note.model.js';
-import textify from './STT/index.stt.js';
+import Note from '../models/note.model';
+import textify from './STT/index.stt';
 import fs from 'fs';
+import { Request, Response } from 'express'
 
-const postNote = async (req, res) => {
+interface fileData extends Request {
+  files: any
+}
+
+
+
+const postNote = async (req : fileData, res: Response):Promise<any> => {
+  
   try {
     const audioFile = req.files.audio;
     const userID = req.body.userID;
     console.log(audioFile.data);
-    const audio = req.files.audio;
+    const audio:any | undefined = req.files.audio;
     audioFile.mv(`uploads/test.wav`, async () => {
       const text = await textify(`test.wav`);
       const newNote = await Note.create({ audio, text, userID });
@@ -22,7 +30,7 @@ const postNote = async (req, res) => {
   }
 };
 
-const getAll = async (req, res) => {
+const getAll = async (req : Request, res: Response) => {
   try {
     const notes = await Note.find();
     res.send(notes);
@@ -32,7 +40,7 @@ const getAll = async (req, res) => {
   }
 };
 
-const getNote = async (req, res) => {
+const getNote = async (req: Request, res: Response) => {
   try {
     const { id } = req.params;
     const note = await Note.findOne({
@@ -45,7 +53,7 @@ const getNote = async (req, res) => {
   }
 };
 
-const deleteAll = async (req, res) => {
+const deleteAll = async (req: Request, res: Response) => {
   try {
     await Note.deleteMany();
     res.sendStatus(204);
@@ -55,7 +63,7 @@ const deleteAll = async (req, res) => {
   }
 };
 
-const deleteNote = async (req, res) => {
+const deleteNote = async (req : Request, res: Response) => {
   try {
     const { id } = req.params;
     await Note.deleteOne({
@@ -69,7 +77,7 @@ const deleteNote = async (req, res) => {
   }
 };
 
-const updateNote = async (req, res) => {
+const updateNote = async (req : Request, res: Response) => {
   try {
     const { id } = req.params;
     const { text, icon, title } = req.body;

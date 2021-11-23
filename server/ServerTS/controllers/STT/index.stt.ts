@@ -3,11 +3,16 @@ import fs from 'fs';
 import path from 'path';
 const __dirname = path.resolve();
 
-export default async (input) => {
+export default async (input: string) => {
   const timestamp = false;
   const keyFilename = 'controllers/STT/missage-38c481f53476.json';
   const client = new SpeechClient({ keyFilename });
   let filename = path.resolve(__dirname, `../server/uploads/${input}`);
+
+  interface TheObject {
+    transcript: string
+    timestamp: any[]
+  }
 
 
 
@@ -29,28 +34,36 @@ export default async (input) => {
   };
 
   const [operation] = await client.longRunningRecognize(request);
-  const [response] = await operation.promise();
+  const [response]: any = await operation.promise();
 
-  const sttOutput = {
+  const sttOutput: TheObject = {
     transcript: '',
     timestamp: [],
   };
 
-  response.results.forEach((result) => {
+  
+
+  response.results.forEach((result: any | undefined) => {
+
+    const value: { word: any, start: any }  = {word: undefined, start: undefined};
+    
     sttOutput.transcript += result.alternatives[0].transcript;
     if (timestamp) {
       result.alternatives[0].words.forEach((wordInfo) => {
         const startSecs =
-          `${wordInfo.startTime.seconds}` +
-          '.' +
-          wordInfo.startTime.nanos / 100000000;
+        `${wordInfo.startTime.seconds}` +
+        '.' +
+        wordInfo.startTime.nanos / 100000000;
         const endSecs =
           `${wordInfo.endTime.seconds}` +
           '.' +
           wordInfo.endTime.nanos / 100000000;
         console.log(`Word: ${wordInfo.word}`);
         console.log(`\t ${startSecs} secs - ${endSecs} secs`);
-        sttOutput.timestamp.push({ word: wordInfo.word, start: startSecs });
+        value.word = wordInfo.word
+        value.start = startSecs
+        
+        sttOutput.timestamp.push(value) 
       });
     }
   });

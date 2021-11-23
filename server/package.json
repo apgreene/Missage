@@ -2,10 +2,12 @@
   "name": "missage",
   "version": "1.0.0",
   "description": "Backend for Missage",
-  "type": "module",
+  "type": "commonjs",
   "main": "index.js",
   "scripts": {
+    "start": "nodemon ServerJS/index.js",
     "test": "mocha --exit"
+
   },
   "author": "",
   "license": "ISC",
@@ -26,9 +28,15 @@
     "morgan": "^1.10.0",
     "mp3-to-wav": "^0.1.11",
     "multer": "^1.4.3",
+    "typescript": "^4.5.2",
     "wavefile": "^11.0.0"
   },
   "devDependencies": {
+    "@types/cors": "^2.8.12",
+    "@types/ejs": "^3.1.0",
+    "@types/express": "^4.17.13",
+    "@types/express-fileupload": "^1.2.0",
+    "@types/morgan": "^1.9.3",
     "nodemon": "^2.0.14",
     "request": "^2.88.2"
   }

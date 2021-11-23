@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import styles from './Navbar.module.css';
-import { useFetchUser } from '../utils/user';
+import { useFetchUser } from '../../utils/user';
 
 const Named = () => {
   const { user, loading } = useFetchUser();

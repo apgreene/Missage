@@ -1,9 +1,9 @@
 import { useRouter } from 'next/router';
-import Sidebar from '../../components/Sidebar';
+import Sidebar from '../../components/Sidebar/Sidebar';
 import { useState } from 'react';
 import { useEffect } from 'react';
 import ApiService from '../api/ApiService';
-import Content from '../../components/Content';
+import Content from '../../components/Content/Content';
 import styles from './pid.module.css';
 import { useFetchUser } from '../../utils/user';
 import AddNote from '../../components/AddNote';

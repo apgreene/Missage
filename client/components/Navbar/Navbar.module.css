@@ -13,8 +13,13 @@
 }
 
 .logo:hover {
-  background-color: var(--main-gray);
+  background-color: var(red);
   transition: 0.4s;
+}
+
+.auth a:hover {
+  transition: 0.4s;
+  color: var(--main-white);
 }
 
 .menu {
@@ -59,10 +64,7 @@
   text-decoration: none;
 }
 
-.auth a:hover {
-  transition: 0.4s;
-  color: var(--main-white);
-}
+
 
 /** For tablet devices **/
 /* @media (min-width: 768px) and (max-width: 1023px) {

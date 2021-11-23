@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
+
 .side {
   min-width: 220px;
   height: 100vh;
@@ -6,6 +9,8 @@
   flex-direction: column;
   justify-content: flex-start;
   background-color: rgba(255, 255, 255, 0.7);
+  font-family: 'Nunito', sans-serif;
+
 }
 
 .info {
@@ -105,6 +110,26 @@
 .picker {
   display: none;
   position: absolute;
+}
+
+.return {
+margin-top: 40em;
+margin-left: 30px;
+width: 150px;
+
+letter-spacing: 1px;
+padding-bottom: none;
+}
+
+.returnHeader:hover {
+  border-bottom: 3px solid rgba(101, 9, 248, 0.2);
+cursor: pointer;
+}
+
+.returnHeader {
+  padding-bottom: 15px;
+  border-bottom: 3px solid rgba(255, 251, 251, 0.5);
+
 }
 
 .listTitle {

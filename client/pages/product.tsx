@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import Head from 'next/head';
-import Navbar from '../components/Navbar';
+import Navbar from '../components/Navbar/Navbar';
 import styles from './product.module.css';
 
 const Named = () => {
@@ -64,7 +64,7 @@ const Named = () => {
               Make a note from your own audio 🎤
             </p>
             <p>
-              You can use your recorded audio, or also can record it directly!
+              You can use your recorded audio, or you can record it directly!
             </p>
           </div>
           <img
@@ -78,7 +78,7 @@ const Named = () => {
             <p className={styles.featureTitle}>
               Easy login with your google account 🍰
             </p>
-            <p>I hate forms, just click your google ID and done!</p>
+            <p>I hate forms, just click your google ID and you are done!</p>
           </div>
           <img
             className={styles.featureImg}
@@ -92,7 +92,7 @@ const Named = () => {
               Label your notes with cute emogi 💗
             </p>
             <p>
-              Labelling with colorful emoji helps to you read your note list.
+              Labelling your notes with colorful emoji, helping you to keep track of your note list.
             </p>
           </div>
           <img
@@ -107,7 +107,7 @@ const Named = () => {
               Recap with both audio and text 📝
             </p>
             <p>
-              Want to check audio file and text?! You can edit the generated
+              Want to check review your audio file and text? You can can, and edit the generated
               text!
             </p>
           </div>
@@ -131,9 +131,9 @@ const Named = () => {
               alt=''
             />
             <p className={styles.pText}>
-              Instead of dictating the conversation by hand or using another
-              recording app at the interview site, I used Missage to record the
-              conversation!
+              Instead of dictating conversations by hand, or using another
+              recording app at the interview site, I use Missage to record my
+              conversations!
             </p>
             <img
               className={styles.featureImg}
@@ -141,7 +141,7 @@ const Named = () => {
               alt=''
             />
             <p className={styles.pText}>
-              Writing down subtitle by repeating the video several times was a
+              Writing down subtitles by replaying videos over and over was a
               time-consuming task. Now, I just extract voice files from videos,
               convert them into text, and refine them while listening again!
             </p>
@@ -151,11 +151,10 @@ const Named = () => {
               alt=''
             />
             <p className={styles.pText}>
-              It is useful for one-on-one meetings or business interviews.
-              Usually, I felt sorry and burdened with the person in front of me
-              taking notes or typing with my head down, but now I can focus on
-              the conversation comfortably making eye contact with the other
-              person.
+              Missage is useful for one-on-one meetings or business interviews.
+              Usually, I felt awkard when taking notes or typing, rather than
+              paying attention to the person in front of me. Now I can focus on
+              the conversation comfortably making eye contact.
             </p>
             <img
               className={styles.featureImg}
@@ -163,9 +162,8 @@ const Named = () => {
               alt=''
             />
             <p className={styles.pText}>
-              I recorded the class and organized the contents of the day's class
-              through voice records converted into text. I focused more on the
-              class, and naturally reviewed the class by organizing lecture
+              I recorded the class and organized the contents of it through voice records converted into text.
+              This allows me to focus more on the class, and more naturally review notes by organizing lecture
               records.
             </p>
           </div>

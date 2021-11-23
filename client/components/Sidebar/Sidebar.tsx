@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import styles from './Sidebar.module.css';
 import React, { useState } from 'react';
-import { useFetchUser } from '../utils/user';
+import { useFetchUser } from '../../utils/user';
 
 let Picker;
 if (typeof window !== 'undefined') {
@@ -82,6 +82,13 @@ const Named = ({ notes, putNote, pid }) => {
         <a className={styles.new}>
           <div>New Note</div>
         </a>
+      </Link>
+      <Link href="/product">
+      <div className={styles.return}>
+        <a>
+        <h5 className={styles.returnHeader}>Back to home page... </h5>
+        </a>
+      </div>
       </Link>
     </div>
   );

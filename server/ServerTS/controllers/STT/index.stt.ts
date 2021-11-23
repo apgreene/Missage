@@ -1,13 +1,16 @@
 import { SpeechClient } from '@google-cloud/speech';
 import fs from 'fs';
 import path from 'path';
-const __dirname = path.resolve();
+// var __dirname = path.resolve();
 
 export default async (input: string) => {
   const timestamp = false;
-  const keyFilename = 'controllers/STT/missage-38c481f53476.json';
+  const keyFilename = './ServerJS/controllers/STT/missage-38c481f53476.json';
   const client = new SpeechClient({ keyFilename });
-  let filename = path.resolve(__dirname, `../server/uploads/${input}`);
+  // @ts-ignore
+  let filename = path.resolve(path.resolve(), `../server/uploads/${input}`);
+
+  // server/ServerJS/controllers/STT/missage-38c481f53476.json
 
   interface TheObject {
     transcript: string

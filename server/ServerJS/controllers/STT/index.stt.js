@@ -15,12 +15,13 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const speech_1 = require("@google-cloud/speech");
 const fs_1 = __importDefault(require("fs"));
 const path_1 = __importDefault(require("path"));
-const __dirname = path_1.default.resolve();
+// var __dirname = path.resolve();
 exports.default = (input) => __awaiter(void 0, void 0, void 0, function* () {
     const timestamp = false;
-    const keyFilename = 'controllers/STT/missage-38c481f53476.json';
+    const keyFilename = './ServerJS/controllers/STT/missage-38c481f53476.json';
     const client = new speech_1.SpeechClient({ keyFilename });
-    let filename = path_1.default.resolve(__dirname, `../server/uploads/${input}`);
+    // @ts-ignore
+    let filename = path_1.default.resolve(path_1.default.resolve(), `../server/uploads/${input}`);
     const languageCode = 'en-US';
     const config = {
         enableWordTimeOffsets: true,

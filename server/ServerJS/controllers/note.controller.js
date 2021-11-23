@@ -17,9 +17,8 @@ const index_stt_1 = __importDefault(require("./STT/index.stt"));
 const fs_1 = __importDefault(require("fs"));
 const postNote = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     try {
+        console.log(req);
         const audioFile = req.files.audio;
-        console.log("this is the audioFile.mv: ", audioFile.mv);
-        console.log("typeof: ", typeof audioFile.mv);
         const userID = req.body.userID;
         const audio = req.files.audio;
         audioFile.mv(`uploads/test.wav`, () => __awaiter(void 0, void 0, void 0, function* () {

@@ -100,4 +100,5 @@
     "skipLibCheck": true                                 /* Skip type checking all .d.ts files. */
   },
   "include": ["ServerTS"]
+  // "include": ["**/*.spec.ts"]
 }

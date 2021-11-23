@@ -26,7 +26,11 @@ const Named = ({ notes, pid, putNote, editTitle, editText, deleteNote }) => {
   const [editableText, setEditableText] = useState(false);
 
   useEffect(() => {
-    window.addEventListener('click', handleClickOutside, true);
+    try {
+      window.addEventListener('click', handleClickOutside, true);
+    } catch (error) {
+      console.error(error)
+    }
   });
 
   const handleClickOutside = (e) => {

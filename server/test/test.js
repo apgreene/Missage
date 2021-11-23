@@ -1,20 +1,20 @@
-import chai from 'chai'
-import mocha from 'mocha';
-import router from '../router.js'
-import request from 'request'
-import chaiHttp from 'chai-http';
-import {
-  expect
-} from 'chai'
-import {
-  should
-} from 'chai'
-import {
-  assert
-} from 'chai'
+const chai = require('chai')
+const mocha =require ('mocha');
 
-import mongoose from 'mongoose'
-import Note from '../models/note.model.js'
+const request =require ('request');
+const chaiHttp =require ('chai-http');
+const {
+  expect
+} =require('chai')
+const {
+  should
+} =require('chai')
+const {
+  assert
+} =require('chai')
+
+const mongoose = require('mongoose')
+const Note =  require('../ServerJS/models/note.model.js')
 
 chai.use(chaiHttp);
 
@@ -30,24 +30,6 @@ describe('Testing HTTP Requests', () => {
     await mongoose.disconnect()
   })
 
-  describe('Creating a document', () => {
-    it('should create a document/file', (done) => {
-      const note = new Note({
-        audio: {
-          name: "619bb1f37c22f32c518262ff.wav",
-          data: 'GkXfo59ChoEBQveBAULygQRC8'
-        },
-        text: "text here",
-        userID: "1"
-      });
-      note.save()
-        .then(() => {
-          assert(!note.isNew);
-          done();
-        })
-    })
-  })
-
   // get all notes
   describe('Get Notes', () => {
 
@@ -56,6 +38,34 @@ describe('Testing HTTP Requests', () => {
         .get('/note')
         .end(function (err, res) {
           expect(res).to.have.status(200);
+
+          done();
+        });
+    });
+    it('2. Response should be an Object', function (done) {
+      chai.request('http://localhost:3001')
+        .get('/note')
+        .end(function (err, res) {
+          expect(res).to.be.a('Object');
+          done();
+        });
+    });
+
+    it('3. res.body should be an array', function (done) {
+      chai.request('http://localhost:3001')
+        .get('/note')
+        .end(function (err, res) {
+          expect(res.body).to.be.a('Array');
+          done();
+        });
+    });
+
+    it.skip('4. Should update the icon', function (done) {
+      chai.request('http://localhost:3001')
+        .put('/note/:???')
+        // alter .icon or title property
+        .end(function (err, res) {
+          expect(res).to.be.a('Object');
           done();
         });
     });

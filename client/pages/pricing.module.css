@@ -1,0 +1,28 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: '';
+  flex-direction: column;
+  height: 100vh;
+  background-image: url(../styles/blurry-gradient-haikei.svg);
+  /* bottom */
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-origin: padding-box;
+  background-clip: border-box;
+  font-family: 'Nunito', sans-serif;
+  letter-spacing: 7px;
+}
+
+.logo {
+  width: 500px;
+  padding: 40px;
+  margin: 40px;
+}
+
+

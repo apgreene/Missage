@@ -20,6 +20,7 @@ function deleteNote(id: string) {
 }
 
 function postNote(form) {
+  console.log("hello world: ", form);
   for (var key of form.entries()) {
     console.log(key[0] + ', ' + key[1]);
   }

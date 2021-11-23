@@ -37,12 +37,13 @@ exports.default = (input) => __awaiter(void 0, void 0, void 0, function* () {
     };
     const [operation] = yield client.longRunningRecognize(request);
     const [response] = yield operation.promise();
+    // const [response] = await operation.promise();
     const sttOutput = {
         transcript: '',
         timestamp: [],
     };
     response.results.forEach((result) => {
-        const value = { word: undefined, start: undefined };
+        const value = { word: '', start: '' };
         sttOutput.transcript += result.alternatives[0].transcript;
         if (timestamp) {
             result.alternatives[0].words.forEach((wordInfo) => {

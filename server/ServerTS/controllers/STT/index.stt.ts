@@ -14,10 +14,14 @@ export default async (input: string) => {
 
   interface TheObject {
     transcript: string
-    timestamp: any[]
+    timestamp: {}[]
   }
 
+  interface ResponseObject {
+  results: [],
+  totalBilledTime: {}
 
+  }
 
   const languageCode = 'en-US';
 
@@ -37,7 +41,9 @@ export default async (input: string) => {
   };
 
   const [operation] = await client.longRunningRecognize(request);
-  const [response]: any = await operation.promise();
+  const [response] : any[] = await operation.promise();
+  // const [response] = await operation.promise();
+
 
   const sttOutput: TheObject = {
     transcript: '',
@@ -46,9 +52,9 @@ export default async (input: string) => {
 
   
 
-  response.results.forEach((result: any | undefined) => {
+  response.results.forEach((result: any | undefined ) => {
 
-    const value: { word: any, start: any }  = {word: undefined, start: undefined};
+    const value: { word: string, start: string }  = {word: '', start: '' };
     
     sttOutput.transcript += result.alternatives[0].transcript;
     if (timestamp) {
@@ -66,7 +72,7 @@ export default async (input: string) => {
         value.word = wordInfo.word
         value.start = startSecs
         
-        sttOutput.timestamp.push(value) 
+        sttOutput.timestamp.push(value)
       });
     }
   });

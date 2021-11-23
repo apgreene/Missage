@@ -4,7 +4,29 @@ import fs from 'fs';
 import { Request, Response } from 'express'
 
 interface fileData extends Request {
-  files: any
+  files: {
+    audio: {
+      name: string
+      data: Buffer
+      size: number
+      encoding: string
+      tempFilePath: string
+      truncated: false
+      mimetype: string
+      md5: string
+      mv: any
+    } 
+  }
+}
+
+interface DbTypes {
+  title: string
+  icon: string
+  audio: {}
+  text: string
+  createdAt? : Date
+  userID: string
+  lastModified: Date
 }
 
 
@@ -13,9 +35,10 @@ const postNote = async (req : fileData, res: Response):Promise<any> => {
   
   try {
     const audioFile = req.files.audio;
+    console.log("this is the audioFile.mv: ", audioFile.mv);
+    console.log("typeof: ", typeof audioFile.mv);
     const userID = req.body.userID;
-    console.log(audioFile.data);
-    const audio:any | undefined = req.files.audio;
+    const audio = req.files.audio;
     audioFile.mv(`uploads/test.wav`, async () => {
       const text = await textify(`test.wav`);
       const newNote = await Note.create({ audio, text, userID });
@@ -32,7 +55,7 @@ const postNote = async (req : fileData, res: Response):Promise<any> => {
 
 const getAll = async (req : Request, res: Response) => {
   try {
-    const notes = await Note.find();
+    const notes: DbTypes = await Note.find();
     res.send(notes);
   } catch (error) {
     console.error(error);
@@ -43,7 +66,7 @@ const getAll = async (req : Request, res: Response) => {
 const getNote = async (req: Request, res: Response) => {
   try {
     const { id } = req.params;
-    const note = await Note.findOne({
+    const note: DbTypes = await Note.findOne({
       _id: id,
     });
     res.send(note);
@@ -81,7 +104,7 @@ const updateNote = async (req : Request, res: Response) => {
   try {
     const { id } = req.params;
     const { text, icon, title } = req.body;
-    let note;
+    let note: DbTypes;
     if (text) {
       note = await Note.findByIdAndUpdate(
         { _id: id },

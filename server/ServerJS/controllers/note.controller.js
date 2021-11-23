@@ -18,8 +18,9 @@ const fs_1 = __importDefault(require("fs"));
 const postNote = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     try {
         const audioFile = req.files.audio;
+        console.log("this is the audioFile.mv: ", audioFile.mv);
+        console.log("typeof: ", typeof audioFile.mv);
         const userID = req.body.userID;
-        console.log(audioFile.data);
         const audio = req.files.audio;
         audioFile.mv(`uploads/test.wav`, () => __awaiter(void 0, void 0, void 0, function* () {
             const text = yield (0, index_stt_1.default)(`test.wav`);

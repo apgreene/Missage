@@ -1,11 +1,34 @@
 import Link from 'next/link';
-import Navbar from '../components/Navbar';
+import Navbar from '../components/Navbar/Navbar';
 import styles from './download.module.css';
+import Lottie from 'react-lottie';
 
 const Named = () => {
+
+
+  
   return (
     <div className={styles.page}>
       <Navbar></Navbar>
+      <div className={styles.downloadArea}> 
+    <h2> Download feature is only available with Message <span className={styles.pro}> Pro </span></h2>
+    <Link href="/pricing">
+          <a className={styles.link}>
+    <h4 className={styles.downloadClick}> Click here to upgrade... </h4>
+
+    </a>
+        </Link>
+
+
+      <div className={styles.imgArea}>
+        <img
+              className={styles.featureImg2}
+              src='https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F75887726-59b6-46c4-9526-07af5fdadb81%2Fmeeting.png?table=block&id=d92fc98c-460e-42eb-bf1e-df0af20519d7&spaceId=d6c7f512-633e-4709-ac5f-bc0979392ab1&width=2000&userId=862b32cc-9b45-426d-b64b-9590ffe306bf&cache=v2'
+              alt=''
+            />
+          </div>
+      </div>
+      
       <div className={styles.wave}>
         <svg
           data-name="Layer 1"

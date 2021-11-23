@@ -1,7 +1,7 @@
 import Link from 'next/link';
-import Sidebar from '../components/Sidebar';
-import Content from '../components/Content';
-import AddNote from '../components/AddNote';
+import Sidebar from '../components/Sidebar/Sidebar';
+import Content from '../components/Content/Content';
+import AddNote from '../components/Addnote/AddNote';
 import styles from './note.module.css';
 import { useState, useEffect } from 'react';
 import ApiService from './api/ApiService';

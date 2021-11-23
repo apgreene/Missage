@@ -16,13 +16,49 @@
   background-origin: padding-box;
   background-clip: border-box;
   font-family: 'Nunito', sans-serif;
-  letter-spacing: 7px;
+  letter-spacing: 3px;
+
 }
 
 .logo {
   width: 500px;
   padding: 40px;
-  margin: 40px;
+  margin-bottom: 40px;
+}
+
+.pro {
+  color: purple;
+  font-weight: bolder;
+
+}
+
+
+.button {
+
+  padding-left: 10px;
+  padding-right: 10px;
+  border-bottom: 3px solid rgba(255, 251, 251, 0.5);
+  overflow: hidden;
+
+  margin-top: 40px
+  
+}
+
+.featureImg {
+  width: 250px;
+}
+
+.button:hover {
+  border-bottom: 3px solid rgba(114, 7, 253, 0.5);
+  cursor: pointer;
+
+}
+
+.link {
+  text-decoration: none;
+  color: #000
+  
+  
 }
 
 

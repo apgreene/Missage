@@ -1,12 +1,43 @@
-import Note from '../models/note.model.js';
-import textify from './STT/index.stt.js';
+import Note from '../models/note.model';
+import textify from './STT/index.stt';
 import fs from 'fs';
+import { Request, Response } from 'express'
 
-const postNote = async (req, res) => {
+interface fileData extends Request {
+  files: {
+    audio: {
+      name: string
+      data: Buffer
+      size: number
+      encoding: string
+      tempFilePath: string
+      truncated: false
+      mimetype: string
+      md5: string
+      mv: any
+    } 
+  }
+}
+
+interface DbTypes {
+  title: string
+  icon: string
+  audio: {}
+  text: string
+  createdAt? : Date
+  userID: string
+  lastModified: Date
+}
+
+
+
+const postNote = async (req : fileData, res: Response):Promise<any> => {
+  
   try {
     const audioFile = req.files.audio;
+    console.log("this is the audioFile.mv: ", audioFile.mv);
+    console.log("typeof: ", typeof audioFile.mv);
     const userID = req.body.userID;
-    console.log(audioFile.data);
     const audio = req.files.audio;
     audioFile.mv(`uploads/test.wav`, async () => {
       const text = await textify(`test.wav`);
@@ -22,9 +53,9 @@ const postNote = async (req, res) => {
   }
 };
 
-const getAll = async (req, res) => {
+const getAll = async (req : Request, res: Response) => {
   try {
-    const notes = await Note.find();
+    const notes: DbTypes = await Note.find();
     res.send(notes);
   } catch (error) {
     console.error(error);
@@ -32,10 +63,10 @@ const getAll = async (req, res) => {
   }
 };
 
-const getNote = async (req, res) => {
+const getNote = async (req: Request, res: Response) => {
   try {
     const { id } = req.params;
-    const note = await Note.findOne({
+    const note: DbTypes = await Note.findOne({
       _id: id,
     });
     res.send(note);
@@ -45,7 +76,7 @@ const getNote = async (req, res) => {
   }
 };
 
-const deleteAll = async (req, res) => {
+const deleteAll = async (req: Request, res: Response) => {
   try {
     await Note.deleteMany();
     res.sendStatus(204);
@@ -55,7 +86,7 @@ const deleteAll = async (req, res) => {
   }
 };
 
-const deleteNote = async (req, res) => {
+const deleteNote = async (req : Request, res: Response) => {
   try {
     const { id } = req.params;
     await Note.deleteOne({
@@ -69,11 +100,11 @@ const deleteNote = async (req, res) => {
   }
 };
 
-const updateNote = async (req, res) => {
+const updateNote = async (req : Request, res: Response) => {
   try {
     const { id } = req.params;
     const { text, icon, title } = req.body;
-    let note;
+    let note: DbTypes;
     if (text) {
       note = await Note.findByIdAndUpdate(
         { _id: id },

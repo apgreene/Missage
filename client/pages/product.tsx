@@ -29,7 +29,7 @@ const Named = () => {
               Your AI recording record manager is
               here. 🚀
             </p>
-            <div>
+            <div className={styles.buttonOverlay}>
               <Link href='/api/login'>
                 <a className={styles.try}> ➡️ Try Missage Free ⬅️ </a>
               </Link>

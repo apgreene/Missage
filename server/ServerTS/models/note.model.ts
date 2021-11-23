@@ -1,6 +1,7 @@
 import pkg from 'mongoose';
 const { model, Schema } = pkg;
 
+
 const noteSchema = new Schema({
   title: { type: String, default: 'Untitled' },
   icon: { type: String, default: '📜' },

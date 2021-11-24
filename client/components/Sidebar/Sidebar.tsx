@@ -12,8 +12,9 @@ if (typeof window !== 'undefined') {
 
 const Named = ({ notes, putNote, pid }) => {
   const { user, loading } = useFetchUser();
-
+  
   const [showID, setShowID] = useState('');
+  const [showmenu, setShowMenu] = useState(false);
 
   const noteList = (notes: []) => {
     if (notes) {
@@ -40,7 +41,7 @@ const Named = ({ notes, putNote, pid }) => {
               <a className={styles.title}>{note['title']}</a>
             </Link>
           </div>
-          {showID === note['_id'] ? (
+          {showID === note['_id'] && (
             <Picker
               pickerStyle={{ position: 'absolute' }}
               className={styles.picker}
@@ -49,46 +50,39 @@ const Named = ({ notes, putNote, pid }) => {
                 setShowID('');
               }}
             />
-          ) : null}
+          )}
         </div>
       ));
     }
   };
 
-  const [showmenu, setShowMenu] = useState(false);
-
-  const openList = () => {
-    setShowMenu(!showmenu);
-    console.log(showmenu);
-  };
-
   return (
     <div className={styles.side}>
-      {user ? (
+      {user && (
         <>
           <div className={styles.info}>
             <img className={styles.pic} src={user.picture} alt="" />
             {`${user.given_name}'s notes`}
           </div>
           <div className={styles.note}>
-            <button onClick={openList} className={styles.listTitle}>
+            <button onClick={() => setShowMenu(!showmenu)} className={styles.listTitle}>
               My Notes
             </button>
             {noteList(notes)}
           </div>
         </>
-      ) : null}
+      )}
       <Link href="/note">
         <a className={styles.new}>
           <div>New Note</div>
         </a>
       </Link>
       <Link href="/product">
-      <div className={styles.return}>
-        <a>
-        <h5 className={styles.returnHeader}>Back to home page... </h5>
-        </a>
-      </div>
+        <div className={styles.return}>
+          <a>
+            <h5 className={styles.returnHeader}>Back to home page... </h5>
+          </a>
+        </div>
       </Link>
     </div>
   );

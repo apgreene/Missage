@@ -1,6 +1,4 @@
-import Link from 'next/link';
 import Sidebar from '../components/Sidebar/Sidebar';
-import Content from '../components/Content/Content';
 import AddNote from '../components/Addnote/AddNote';
 import styles from './note.module.css';
 import { useState, useEffect } from 'react';
@@ -37,18 +35,18 @@ const Named = () => {
 
   return (
     <div className={styles.note}>
-      {user ? (
+      {user && (
         <>
           <Sidebar
             notes={
-              notes ? notes.filter((note) => note['userID'] === user.sub) : null
+              notes && notes.filter((note) => note['userID'] === user.sub)
             }
             putNote={putNote}
             pid='0'
           ></Sidebar>
           <AddNote postNote={postNote} userid={user.sub}></AddNote>
         </>
-      ) : null}
+      )}
     </div>
   );
 };

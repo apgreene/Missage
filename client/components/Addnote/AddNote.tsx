@@ -9,7 +9,6 @@ import {
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useDropzone } from 'react-dropzone';
 import {
-  ReactMediaRecorder,
   useReactMediaRecorder,
 } from 'react-media-recorder';
 

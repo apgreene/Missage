@@ -15,7 +15,7 @@ const Named = ({ notes, pid, putNote, editTitle, editText, deleteNote }) => {
   const note = notes.find((note: {}) => note['_id'] === pid);
   console.log(note);
 
-  const [show, setShow] = useState(false);
+  const [showEmojis, setShowEmojis] = useState(false);
 
   const titleref = useRef(null);
   const textref = useRef(null);
@@ -38,8 +38,8 @@ const Named = ({ notes, pid, putNote, editTitle, editText, deleteNote }) => {
       setEditableTitle(false);
     if (textref && editableText && !textref.current?.contains(e.target))
       setEditableText(false);
-    if (iconref && show && !iconref.current?.contains(e.target)) {
-      setShow(false);
+    if (iconref && showEmojis && !iconref.current?.contains(e.target)) {
+      setShowEmojis(false);
     }
   };
 
@@ -115,12 +115,12 @@ const Named = ({ notes, pid, putNote, editTitle, editText, deleteNote }) => {
         <p ref={iconref} className={styles.noteIcon}>
           <div
             onClick={() => {
-              !show ? setShow(true) : setShow(false);
+              !showEmojis ? setShowEmojis(true) : setShowEmojis(false);
             }}
           >
             {note?.icon}
           </div>
-          {show ? (
+          {showEmojis && (
             <Picker
               pickerStyle={{
                 zindex: 10,
@@ -128,15 +128,14 @@ const Named = ({ notes, pid, putNote, editTitle, editText, deleteNote }) => {
               }}
               onEmojiClick={(event, emojiObject) => {
                 putNote(emojiObject.emoji, pid);
-                setShow(false);
+                setShowEmojis(false);
               }}
             />
-          ) : null}
+          )}
         </p>
         <FontAwesomeIcon
           onClick={() => {
-            const after = deleteNote(pid);
-            console.log(after);
+            deleteNote(pid);
             Router.push(`/note`);
           }}
           icon={faTrashAlt}

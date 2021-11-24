@@ -33,7 +33,7 @@ const Named = () => {
         </Link>
       </div>
       <div className={styles.auth}>
-        {user && !loading ? (
+        {user && !loading && (
           <>
             <Link href="/note">
               <a>My Note</a>
@@ -42,8 +42,8 @@ const Named = () => {
               <a>Logout</a>
             </Link>
           </>
-        ) : null}
-        {!user && !loading ? (
+        )}
+        {!user && !loading && (
           <>
             <Link href="/api/login">
               <a>Login</a>
@@ -52,7 +52,7 @@ const Named = () => {
               <a>Try Missage Free</a>
             </Link>
           </>
-        ) : null}
+        )}
       </div>
     </div>
   );

@@ -39,7 +39,6 @@ const Named = () => {
             alt=''
           />
         </div>
-      </div>
       <div className={styles.wave}>
         <svg
           data-name='Layer 1'
@@ -53,6 +52,7 @@ const Named = () => {
             className='shape-fill'
           ></path>
         </svg>
+      </div>
       </div>
       <div className={styles.features}>
         <p className={styles.l}>✨See what you can do✨</p>

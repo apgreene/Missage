@@ -1,24 +1,24 @@
 .options {
-  background-image: url(../../styles/blurry-gradient-haikei.svg);
-  background-position: center center;
-  background-size: cover;
-  background-repeat: no-repeat;
+  align-items: center;
   background-attachment: fixed;
-  background-origin: padding-box;
   background-clip: border-box;
-  width: 100%;
+  background-image: url(../../styles/blurry-gradient-haikei.svg);
+  background-origin: padding-box;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
   display: flex;
   justify-content: center;
-  align-items: center;
+  width: 100%;
 }
 
 .drag {
-  height: 300px;
-  width: 400px;
+  align-items: center;
   display: flex;
   flex-direction: column;
+  height: 300px;
   justify-content: center;
-  align-items: center;
+  width: 400px;
 }
 
 .drag:hover {
@@ -26,35 +26,35 @@
 }
 
 .dragActive {
-  height: 300px;
-  width: 400px;
+  align-items: center;
+  border-style: dotted;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-  border-style: dotted;
+  height: 300px;
+  width: 400px;
 }
 
 .icon {
-  font-size: 70px;
   color: var(--main-black);
+  font-size: 70px;
 }
 
 .icon:hover {
-  transform: scale(1.1);
-  transition: 0.3s;
   color: var(--main-purple);
   cursor: pointer;
+  transform: scale(1.1);
+  transition: 0.3s;
 }
 
 .record {
-  height: 300px;
-  width: 200px;
-  margin-right: 100px;
+  align-items: center;
   display: flex;
   flex-direction: column;
+  height: 300px;
   justify-content: center;
-  align-items: center;
+  margin-right: 100px;
+  width: 200px;
 }
 
 .file {
@@ -62,6 +62,6 @@
 }
 
 .title {
-  font-size: 20px;
   color: var(--main-black);
+  font-size: 20px;
 }

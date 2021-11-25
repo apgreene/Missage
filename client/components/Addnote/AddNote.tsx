@@ -1,6 +1,6 @@
 import styles from './AddNote.module.css';
 import React from 'react';
-import { useState, useCallback } from 'react';
+import { useCallback } from 'react';
 import {
   faFileUpload,
   faMicrophoneAlt,

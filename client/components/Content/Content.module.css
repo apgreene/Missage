@@ -6,8 +6,8 @@
 /* small desktop */
 @media (min-width: 1024px) and (max-width: 1300px) {
   .component {
-    padding: 50px 70px 50px 70px;
     height: 100%;
+    padding: 50px 70px 50px 70px;
     width: 100%;
   }
 }
@@ -15,8 +15,8 @@
 /** For tablet devices **/
 @media (min-width: 768px) and (max-width: 1023px) {
   .component {
-    padding: 50px 60px 50px 60px;
     height: 100%;
+    padding: 50px 60px 50px 60px;
     width: 100%;
   }
 }
@@ -24,24 +24,23 @@
 /** For mobile devices **/
 @media (max-width: 767px) {
   .component {
-    padding: 50px 30px 50px 30px;
     height: 100%;
+    padding: 50px 30px 50px 30px;
     width: 100%;
   }
 }
 
 .iconBar {
+  align-items: center;
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  /* position: relative; */
 }
 
 .noteIcon {
-  width: 50px;
-  font-size: 50px;
   cursor: pointer;
+  font-size: 50px;
   margin: 0;
+  width: 50px;
   z-index: 2;
 }
 
@@ -56,76 +55,76 @@
 }
 
 .trashcan:hover {
-  transform: scale(1.1);
-  transition: 0.3s;
   color: var(--main-purple);
   cursor: pointer;
+  transform: scale(1.1);
+  transition: 0.3s;
 }
 
 .noteTitle {
+  align-items: center;
   background-color: var(--main-white);
   border-radius: 10px;
+  display: flex;
   font-size: 30px;
   height: 80px;
-  display: flex;
   justify-content: center;
-  align-items: center;
-  width: 100%;
   position: relative;
+  width: 100%;
 }
 
 .titleInput {
+  align-items: center;
+  background-color: var(--main-white);
   border: 1px solid var(--main-gray);
   border-radius: 10px;
-  text-align: center;
+  box-sizing: border-box;
+  display: flex;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
     'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  box-sizing: border-box;
-  background-color: var(--main-white);
-  width: 70vw;
-  height: 80px;
   font-size: 30px;
-  display: flex;
+  height: 80px;
   justify-content: center;
-  align-items: center;
+  text-align: center;
   opacity: 70%;
+  width: 70vw;
 }
 
 .noteText {
-  font-size: 20px;
   background-color: var(--main-white);
   border-radius: 10px;
-  padding: 50px;
+  font-size: 20px;
   height: 63vh;
+  padding: 50px;
   width: 70vw;
 }
 
 .textInput {
-  padding: 50px;
-  vertical-align: top;
+  background-color: var(--main-white);
+  border-radius: 10px;
+  box-sizing: border-box;
   font-size: 20px;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
     'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  box-sizing: border-box;
-  background-color: var(--main-white);
-  opacity: 70%;
-  border-radius: 10px;
-  width: 100%;
   height: 63vh;
+  opacity: 70%;
+  padding: 50px;
   text-align: start;
+  vertical-align: top;
+  width: 100%;
 }
 
 .extraInfo {
+  align-items: center;
   display: flex;
   justify-content: space-between;
-  align-items: center;
   margin-top: 15px;
 }
 
 .audio {
   backface-visibility: 'hidden';
-  width: 80%;
-  height: 30px;
-  border: transparent;
   background-color: transparent;
+  border: transparent;
+  height: 30px;
+  width: 80%;
 }

@@ -1,15 +1,15 @@
 .navbar {
+  align-items: center;
   display: flex;
   justify-content: space-between;
-  align-items: center;
   padding: 30px 50px 30px 50px;
   position: sticky;
 }
 
 .logo {
-  width: 100px;
-  padding: 0;
   margin: 0;
+  padding: 0;
+  width: 100px;
 }
 
 .logo:hover {
@@ -18,28 +18,28 @@
 }
 
 .auth a:hover {
-  transition: 0.4s;
   color: var(--main-white);
+  transition: 0.4s;
 }
 
 .menu {
-  flex: 1;
   display: flex;
-  justify-content: flex-start;
+  flex: 1;
   font-size: 15px;
+  justify-content: flex-start;
   width: 50%;
 }
 
 .menu a {
   color: var(--main-black);
-  padding-right: 30px;
   font-size: 17px;
+  padding-right: 30px;
   text-decoration: none;
 }
 
 .menu a:hover {
-  transition: 0.4s;
   color: var(--main-white);
+  transition: 0.4s;
 }
 
 .logo {
@@ -48,8 +48,8 @@
 }
 
 .logo:hover {
-  transition: 0.4s;
   color: var(red);
+  transition: 0.4s;
 }
 
 .auth {
@@ -59,12 +59,10 @@
 
 .auth a {
   color: var(--main-black);
-  padding-right: 30px;
   font-size: 17px;
+  padding-right: 30px;
   text-decoration: none;
 }
-
-
 
 /** For tablet devices **/
 /* @media (min-width: 768px) and (max-width: 1023px) {

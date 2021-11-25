@@ -80,7 +80,7 @@ describe.skip('Testing HTTP Requests', () => {
     })
   })
 
-  get all notes
+  // get all notes
   describe('Get Notes', () => {
 
     it('1. test GET note status response', function (done) {
@@ -93,8 +93,8 @@ describe.skip('Testing HTTP Requests', () => {
     });
   })
 
-   GET by ID
-   describe.ignore('individual note test', () => {
+  // GET by ID
+  describe.ignore('individual note test', () => {
     it('2. test GET specific note while DB is empty, expect error status response', function(done) { 
       chai.request('http://localhost:3001')
       .get('/note/:2')

@@ -31,7 +31,7 @@
 
 .button {
   border-bottom: 3px solid rgba(255, 251, 251, 0.5);
-  margin-top: 40px
+  margin-top: 40px;
   padding-left: 10px;
   padding-right: 10px;
   overflow: hidden;
@@ -47,7 +47,7 @@
 }
 
 .link {
-  color: #000
+  color: #000;
   text-decoration: none;
 }
 

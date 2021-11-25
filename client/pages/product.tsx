@@ -22,12 +22,10 @@ const Named = () => {
           <div className={styles.col}>
             <p className={styles.xl}>Don't Miss A Word!🤞</p>
             <p className={styles.m}>
-              An assistant in your hand who improved your work ability and
-              quality of life! 
+              An assistant in your hand, improving your work and quality of life! 
             <br />
             Finally, 
-              Your AI recording record manager is
-              here. 🚀
+              Your AI recording record manager is here. 🚀
             </p>
             <div className={styles.buttonOverlay}>
               <Link href='/api/login'>
@@ -41,7 +39,6 @@ const Named = () => {
             alt=''
           />
         </div>
-      </div>
       <div className={styles.wave}>
         <svg
           data-name='Layer 1'
@@ -56,6 +53,7 @@ const Named = () => {
           ></path>
         </svg>
       </div>
+      </div>
       <div className={styles.features}>
         <p className={styles.l}>✨See what you can do✨</p>
         <p className={styles.feature}>
@@ -64,7 +62,7 @@ const Named = () => {
               Make a note from your own audio 🎤
             </p>
             <p>
-              You can use your recorded audio, or you can record it directly!
+              You can use your pre-recorded audio, or you can record it directly!
             </p>
           </div>
           <img

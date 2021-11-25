@@ -15,7 +15,7 @@ const Named = () => {
           }
           alt=""
         />
-      <h1> Missage <span className={styles.pro}> Pro </span> Coming soon! </h1>
+      <h1>Missage <span className={styles.pro}> Pro </span> Coming soon!</h1>
       <h3>Don't Miss out! </h3>
       <img
           className={styles.featureImg}
@@ -25,7 +25,7 @@ const Named = () => {
       <Link href="/product">
         <span className={styles.button}>
           <a className={styles.link}>
-            <h4 className={styles.buttonHeader}>Back to Home page.. </h4>
+            <h4 className={styles.buttonHeader}>Back to Home page..</h4>
           </a>
         </span>
       </Link>

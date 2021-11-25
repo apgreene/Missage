@@ -2,7 +2,6 @@ import Note from '../models/note.model';
 import textify from './STT/index.stt';
 import fs from 'fs';
 import { Request, Response } from 'express'
-import DbTypes from '../Types/DbTypes'
 
 
 interface fileData extends Request {

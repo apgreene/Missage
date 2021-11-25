@@ -2,66 +2,58 @@
 
 
 .page {
-  min-height: 100vh;
   background-image: url(../styles/blurry-gradient-haikei.svg);
-  /* bottom */
   background-position: bottom 200px center;
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-origin: padding-box;
   background-clip: border-box;
+  min-height: 100vh;
 }
 
 .wave {
-  position: absolute;
-  /* bottom */
   bottom: 200px;
   left: 0;
-  width: 100%;
-  overflow: hidden;
   line-height: 0;
+  overflow: hidden;
+  position: absolute;
   transform: rotate(180deg);
+  width: 100%;
 }
 
 .wave svg {
-  position: relative;
   display: block;
-  width: calc(100% + 1.3px);
   height: 150px;
+  position: relative;
+  width: calc(100% + 1.3px);
 }
 
 .downloadArea {
-  display: flex;
-  justify-content: center;
   align-items: flex-start;
-  flex-flow: row wrap;
-  margin-left: 100px;
-  width: 60vw;
-  height: 40vh;
+  display: flex;
   font-family: 'Nunito', sans-serif;
-  letter-spacing: 2px;
+  flex-flow: row wrap;
   font-size: 20px;
+  height: 40vh;
+  justify-content: center;
+  letter-spacing: 2px;
+  margin-left: 100px;
   margin-top:50px ;
-
+  width: 60vw;
 }
 
 .featureImg2 {
-  width: 380px;
   height: 350px;
- 
+  width: 380px;
 }
 
 .imgArea {
-
-  /* position: absolute; */
   margin-left: 150px;
-
-
 }
 
 .downloadClick {
-  border-bottom: 3px solid rgba(255, 251, 251, 0.2);;
+  border-bottom: 3px solid rgba(255, 251, 251, 0.2);
   padding-bottom: 10px;
 }
 
@@ -71,26 +63,26 @@
 }
 
 .link {
+  color: #000;
   text-decoration: none;
-  color: #000
 }
 
 .pro {
-  color: purple
+  color: purple;
 }
 
 /** For tablet devices **/
 @media (min-width: 768px) and (max-width: 1023px) {
   .wave svg {
-    width: calc(100% + 1.3px);
     height: 110px;
+    width: calc(100% + 1.3px);
   }
 }
 
 /** For mobile devices **/
 @media (max-width: 767px) {
   .wave svg {
-    width: calc(100% + 1.3px);
     height: 66px;
+    width: calc(100% + 1.3px);
   }
 }

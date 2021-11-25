@@ -4,7 +4,6 @@
 .page {
   height: 69.9vh;
   background-image: url(../styles/blurry-gradient-haikei.svg);
-  /* bottom */
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -25,16 +24,11 @@
   align-items: flex-start;
   padding-left: 50px;
   z-index: 4;
-
-
 }
 
 .col {
   display: flex;
   flex-direction: column;
-  /* position: absolute; */
-
-
 }
 
 .xl {
@@ -58,97 +52,98 @@
 }
 
 .try {
-  z-index: 1;
-  text-align: center;
-  padding: 10px;
-  text-decoration: none;
-  color: var(--main-white);
+  align-items: center;
   background-color: var(--main-purple);
-  width: 200px;
-  padding: 10px;
   border-radius: 10px;
-  min-width: 20rem;
-  min-height: 4rem;
+  color: var(--main-white);
   display: flex;
   justify-content: center;
-  align-items: center;
   letter-spacing: 2px;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  min-width: 20rem;
+  min-height: 4rem;
+  width: 200px;
+  z-index: 1;
 }
 
 .try:hover {
-  transition: 0.4s;
-  color: var(--main-black);
   background-color: var(--main-white);
+  color: var(--main-black);
+  transition: 0.4s;
 }
 
 .features {
-  padding: 100px;
-  margin-top: 30px;
+  align-items: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  margin-top: 30px;
+  padding: 100px;
 }
+
 .feature {
+  align-items: center;
   display: flex;
   justify-content: center;
-  align-items: center;
   padding-left: 50px;
   padding-right: 50px;
   width: 830px;
 }
-.content {
-  padding-left: 50px;
 
+.content {
   min-width: 50rem;
+  padding-left: 50px;
   text-align: center;
 }
+
 .featureImg {
-  width: 250px;
   margin-right: 50px;
   margin-top: 30px;
+  width: 250px;
 }
+
 .featureTitle {
   font-size: 23px;
-  letter-spacing: 1px;
   font-weight: bold;
+  letter-spacing: 1px;
 }
 
 .pText {
-  line-height: 30px;
   letter-spacing: 1px;
+  line-height: 30px;
 }
 
 .buttonOverlay {
   z-index: 3;
 }
 
+
 /* Background */
 
 .wave {
-  position: absolute;
   /* bottom */
   bottom: 30vh;
   left: 0;
-  width: 100%;
-  overflow: hidden;
   line-height: 0;
+  overflow: hidden;
+  position: absolute;
   transform: rotate(180deg);
+  width: 100%;
   z-index:2;
 }
 
 .wave svg {
-  /* fill: aqua; */
-  position: relative;
   display: block;
-  width: calc(100% + 1.3px);
   height: 150px;
   margin-bottom: 0px;
+  position: relative;
+  width: calc(100% + 1.3px);
 }
 
 .goals {
-  padding: 100px;
-  /* margin-top: */
+  align-items: center;
   background-image: url(../styles/blurry-gradient-haikei.svg);
   background-position: center center;
   background-size: cover;
@@ -156,48 +151,45 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  padding: 100px;
   margin: 0;
 }
 
 .goalContent {
+  align-items: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
   width: 450px;
 }
 
 .bottom {
-  margin: 0;
-  /* background-color: var(--main-gray); */
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   align-items: center;
-  height: 500px;
+  display: flex;
   border-bottom: 4px solid black;
   background-color: rgb(250, 223, 250);
-  
+  flex-direction: column;
+  height: 500px;
+  justify-content: center;
+  margin: 0;
 }
 
 .logo {
-  width: 200px;
   padding: 30px;
+  width: 200px;
 }
 
 .buymeacoffee {
-  margin: 50px;
-  height: 200px;
   cursor: pointer;
+  height: 200px;
+  margin: 50px;
 }
 
 /** For tablet devices **/
 @media (min-width: 768px) and (max-width: 1023px) {
   .wave svg {
-    width: calc(100% + 1.3px);
     height: 110px;
+    width: calc(100% + 1.3px);
   }
   .content {
     min-width: none;
@@ -207,7 +199,7 @@
 /** For mobile devices **/
 @media (max-width: 767px) {
   .wave svg {
-    width: calc(100% + 1.3px);
     height: 66px;
+    width: calc(100% + 1.3px);
   }
 }

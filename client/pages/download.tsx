@@ -1,7 +1,6 @@
 import Link from 'next/link';
 import Navbar from '../components/Navbar/Navbar';
 import styles from './download.module.css';
-import Lottie from 'react-lottie';
 
 const Named = () => {
 

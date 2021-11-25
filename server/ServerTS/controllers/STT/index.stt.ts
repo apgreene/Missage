@@ -44,13 +44,11 @@ export default async (input: string) => {
   const [response] : any[] = await operation.promise();
   // const [response] = await operation.promise();
 
-
   const sttOutput: TheObject = {
     transcript: '',
     timestamp: [],
   };
 
-  
 
   response.results.forEach((result: any | undefined ) => {
 
